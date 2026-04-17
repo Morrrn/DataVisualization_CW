@@ -1,0 +1,137 @@
+body {
+    background-color: #faf9f5;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #222;
+    font-weight: 700;
+}
+
+.header p {
+    margin: 5px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.dashboard {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #fffcee;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 550px;
+    align-items: center;
+}
+
+.card-header {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.back-btn {
+    position: absolute;
+    left: 0;
+    top: -5px;
+    background: #f1f3f5;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: #444;
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background: #e2e6ea;
+    color: #000;
+    transform: translateX(-2px);
+}
+
+#map, #line-chart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.country {
+    stroke: #fff;
+    stroke-width: 0.75px;
+    cursor: pointer;
+    transition: opacity 0.2s, stroke-width 0.2s, stroke 0.2s;
+}
+
+.country:hover {
+    opacity: 0.8;
+    stroke: #000;
+    stroke-width: 1.5px;
+}
+
+.chart-legend {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.legend-item { display: flex; align-items: center; gap: 8px; }
+.dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; }
+.dot-iwi { background-color: #e377c2; }
+.dot-exp { background-color: #17becf; }
+
+.axis-path { stroke: #e0e0e0; }
+.line-iwi { fill: none; stroke: #e377c2; stroke-width: 3.5px; }
+.line-exp { fill: none; stroke: #17becf; stroke-width: 3.5px; }
+
+.controls { text-align: center; margin-bottom: 25px; }
+.slider-group { background-color: #f1f3f5; padding: 12px 20px; border-radius: 8px; display: inline-block; }
+.slider-group label { font-size: 14px; color: #555; font-weight: 500; margin-right: 15px; }
+#lag-value { color: #e64747; font-weight: 700; font-size: 16px; }
+input[type=range] { width: 300px; cursor: pointer; vertical-align: middle; }
+
+#tooltip {
+    position: absolute;
+    background: rgba(33, 33, 33, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    pointer-events: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.hidden { display: none; }
